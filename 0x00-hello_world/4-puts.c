@@ -7,5 +7,3 @@ int main(void) {
 puts("\"Programming is like building a multilingual puzzle");
 return (0);
 }
-echap :wq
-betty 4-puts.c
