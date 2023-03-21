@@ -1,10 +1,11 @@
 #include "main.h"
 /**
- * main - Entry point 
- * description: 'prints _putchar to stdout'
- * Return: Always 0
+ * main - print _putchar
+ * is written by mbah
+ * description 'prints_putchar to stdout'
+ * Return: alwawys 0
  */
-int main(void)
+int main(void) 
 {
     _putchar('_');
     _putchar('p');
