@@ -1,18 +1,33 @@
-#include "holberton.h"
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * cap_string - capitalize first letter of each word
+ * @s: string to manipulate
+ * Return: string
  */
-int main(void)
-{
-	char s[] = "Expect the best. Prepare for the worst. Capitalize on what comes.\nhello world! hello-world 0123456hello world\thello world.hello world\n";
-	char *p;
 
-	p = cap_string(s);
-	printf("%s", p);
-	printf("%s", s);
-	return (0);
+char *cap_string(char *s)
+{
+	int i = 0;
+
+	/* check first index for capital */
+	if (s[i] >= 'a' && s[i] <= 'z')
+		s[i] = s[i] - 'a' + 'A';
+	i++;
+
+	while (s[i] != '\0') /* iterate through string */
+	{
+
+		/* if lowercase and prior char is separator, capitalize*/
+		if ((s[i] >= 'a' && s[i] <= 'z')
+		    && (s[i - 1] == ',' || s[i - 1] == ';' || s[i - 1] == '.' ||
+			s[i - 1] == '!' || s[i - 1] == '?' || s[i - 1] == '"' ||
+			s[i - 1] == '(' || s[i - 1] == ')' || s[i - 1] == '{' ||
+			s[i - 1] == '}' || s[i - 1] == ' ' || s[i - 1] == '\t'
+			|| s[i - 1] == '\n'))
+			s[i] = s[i] - 'a' + 'A';
+		i++;
+	}
+
+	return (s);
 }
