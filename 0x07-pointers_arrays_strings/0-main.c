@@ -25,12 +25,12 @@ void simple_print_buffer(char *buffer, unsigned int size)
 		}
 		printf("0x%02x", buffer[i]);
 		i++;
-        }
+	}
 	printf("\n");
 }
 
 /**
- * main - check the code for Holberton School students.
+ * main - check the code
  *
  * Return: Always 0.
  */
